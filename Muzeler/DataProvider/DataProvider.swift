@@ -23,5 +23,4 @@ final class DataProvider: DataProviderProtocol {
     func fetchSourceMuseums(endpoint: MuseumEndpoints, parameters: [MuseumParameter], completion: @escaping (Result<Museum, MuseumApiError>) -> Void) {
         serviceManager.fetchData(endPoint: endpoint, parameters: parameters, completion: completion)
     }
-    
 }

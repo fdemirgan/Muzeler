@@ -6,8 +6,6 @@
 //
 
 import UIKit
-
-
 class ViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
@@ -27,6 +25,9 @@ class ViewController: UIViewController {
             destinationVC.museum = museum
         }
     }
+    @IBAction func museumsLocationTapped(_ sender: Any) {
+        print("Listedeki müzelerin konumları gösterilecek.")
+    }
 }
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
@@ -43,10 +44,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let museum = viewModel.museums[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: SegueIdentifier.MuseumDetailVC.rawValue, sender: museum)
-
-       
-
-
     }
 }
 

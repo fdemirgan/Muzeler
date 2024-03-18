@@ -7,8 +7,8 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-
+final class DetailViewController: UIViewController {
+    
     @IBOutlet private weak var museumImage: UIImageView!
     @IBOutlet private weak var nameLbl: UILabel!
     @IBOutlet private weak var descrpitonLbl: UILabel!
@@ -22,7 +22,10 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        detailUpdate()
+    }
+    
+    func detailUpdate(){
         if let museum = museum {
             nameLbl.text = museum.name
             descrpitonLbl.text = museum.description
@@ -34,8 +37,6 @@ class DetailViewController: UIViewController {
             
         }
     }
-    
-    
     
     
     @IBAction func mapTapped(_ sender: Any) {

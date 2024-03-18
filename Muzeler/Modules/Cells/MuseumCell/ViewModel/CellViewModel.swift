@@ -12,15 +12,12 @@ final class CellViewModel {
     init(museum: MuseumData) {
         self.museum = museum
     }
-    
     var name: String {
         return museum.name?.uppercased() ?? ""
     }
-    
     var description: String {
         return museum.description ?? ""
     }
-    
     var distance: String {
         return "\(museum.distanceKm ?? 0.0) km  "
     }

@@ -35,7 +35,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Anasayfa" id="vVz-to-oMe">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="map" catalog="system" id="0NI-gt-dCw"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map" catalog="system" id="0NI-gt-dCw">
+                            <connections>
+                                <action selector="museumsLocationTapped:" destination="BYZ-38-t0r" id="tFk-3i-1Di"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="e3G-Qb-xNK" id="RXQ-FJ-UhU"/>

@@ -7,7 +7,7 @@
 
 import Foundation
 import CoreLocation
-// AynObject yazmamın sebebi yazdığım protokolün sadece class larda kullanılabilir bir protocol olmasını istiyorum. AnyObject yerine class da yazabilirdim ama böyle hem swfit standartlarına hem de objective-C ile uyumludur.
+// AynObject yazmamın sebebi yazdığım protokolün sadece class larda kullanılabilir bir protocol olmasını istiyorum. AnyObject yerine class da yazabilirdim ama böyle hem swift standartlarına hem de objective-C ile uyumludur.
 protocol LocationManagerDelegate: AnyObject {
     func didUpdateLocation(latitude: Double, longitude: Double)
 }
