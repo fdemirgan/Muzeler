@@ -41,7 +41,7 @@ final class DetailViewController: UIViewController {
     
     @IBAction func mapTapped(_ sender: Any) {
         let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SegueIdentifier.MapVC.rawValue) as! MapViewController
-        destinationVC.museum = museum
+        destinationVC.detailMuseum = museum
         navigationController?.pushViewController(destinationVC, animated: true)
     }
     

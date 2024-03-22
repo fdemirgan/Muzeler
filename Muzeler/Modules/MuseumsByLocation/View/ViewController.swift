@@ -26,7 +26,9 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func museumsLocationTapped(_ sender: Any) {
-        print("Listedeki müzelerin konumları gösterilecek.")
+        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SegueIdentifier.MapVC.rawValue) as! MapViewController
+        destinationVC.museums = viewModel.museums
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
 }
 
