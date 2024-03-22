@@ -9,4 +9,6 @@ import Foundation
 enum SegueIdentifier: String {
     case SourceMuseumDetailVC
     case MuseumDetailVC
+    case MuseumMapVC
+    case MuseumsMapVC
 }

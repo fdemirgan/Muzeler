@@ -38,9 +38,16 @@ final class DetailViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == SegueIdentifier.MuseumMapVC.rawValue else { return }
+        if let museum = sender as? MuseumData {
+            let destinationVC = segue.destination as! MapViewController
+            destinationVC.museum = museum
+        }
+    }
     
     @IBAction func mapTapped(_ sender: Any) {
-        print("Muzenin konumu haritada gösterilecek.")
+        performSegue(withIdentifier: SegueIdentifier.MuseumMapVC.rawValue, sender: museum)
     }
     
     @IBAction func phoneNumberTapped(_ sender: Any) {
