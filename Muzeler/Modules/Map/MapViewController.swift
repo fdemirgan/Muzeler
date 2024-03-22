@@ -56,7 +56,7 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         if let userLocation = mapView.userLocation.location?.coordinate {
             print("userLocation: \(userLocation) ")
-            let region = MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04))
+            let region = MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015))
             mapView.setRegion(region, animated: true)
         }
     }
