@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,6 +39,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="map" catalog="system" id="0NI-gt-dCw">
                             <connections>
                                 <action selector="museumsLocationTapped:" destination="BYZ-38-t0r" id="tFk-3i-1Di"/>
+                                <segue destination="sWZ-fO-aqd" kind="show" identifier="MuseumsMapVC" id="EHh-ub-Upg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -49,6 +51,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1993.1297709923663" y="3.5211267605633805"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="geC-Jd-RbY">
+            <objects>
+                <viewController id="sWZ-fO-aqd" customClass="MapViewController" customModule="Muzeler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9hM-T2-GpY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hu-lg-yGk">
+                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZZx-n4-Dxw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZZx-n4-Dxw" firstAttribute="bottom" secondItem="6Hu-lg-yGk" secondAttribute="bottom" id="Ik4-Af-6Mc"/>
+                            <constraint firstItem="6Hu-lg-yGk" firstAttribute="top" secondItem="ZZx-n4-Dxw" secondAttribute="top" id="VIE-tb-4iW"/>
+                            <constraint firstItem="6Hu-lg-yGk" firstAttribute="leading" secondItem="ZZx-n4-Dxw" secondAttribute="leading" id="X7x-KN-vKt"/>
+                            <constraint firstItem="ZZx-n4-Dxw" firstAttribute="trailing" secondItem="6Hu-lg-yGk" secondAttribute="trailing" id="gpK-V3-BYQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="I1C-0A-FFQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8LQ-tQ-3My" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4289" y="-444"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="sSO-T1-Oii">
@@ -153,6 +183,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="mapTapped:" destination="kt4-vQ-nI3" eventType="touchUpInside" id="kry-Xu-bta"/>
+                                                    <segue destination="sWZ-fO-aqd" kind="show" identifier="MuseumMapVC" id="N55-b0-zg5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBk-l6-3cT">
@@ -369,6 +400,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Drj-eB-YOA"/>
+        <segue reference="N55-b0-zg5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
