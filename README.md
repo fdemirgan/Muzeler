@@ -12,3 +12,4 @@ Bu projemde
   - Alamofire kullandım.
 Projeyi geliştirmeye devam ediyorum.
 Sonraki aşamalarda projeye harita ve telefon aramasına yönlendirme fonksiyonlarını eklemeyi planlıyorum.
+Projeeye harita fonksiyonu eklendi. Geliştirmeye devam ediyorum.
