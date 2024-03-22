@@ -38,16 +38,11 @@ final class DetailViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard segue.identifier == SegueIdentifier.MuseumMapVC.rawValue else { return }
-        if let museum = sender as? MuseumData {
-            let destinationVC = segue.destination as! MapViewController
-            destinationVC.museum = museum
-        }
-    }
     
     @IBAction func mapTapped(_ sender: Any) {
-        performSegue(withIdentifier: SegueIdentifier.MuseumMapVC.rawValue, sender: museum)
+        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SegueIdentifier.MapVC.rawValue) as! MapViewController
+        destinationVC.museum = museum
+        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     @IBAction func phoneNumberTapped(_ sender: Any) {

@@ -39,7 +39,6 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="map" catalog="system" id="0NI-gt-dCw">
                             <connections>
                                 <action selector="museumsLocationTapped:" destination="BYZ-38-t0r" id="tFk-3i-1Di"/>
-                                <segue destination="sWZ-fO-aqd" kind="show" identifier="MuseumsMapVC" id="EHh-ub-Upg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -55,13 +54,13 @@
         <!--Map View Controller-->
         <scene sceneID="geC-Jd-RbY">
             <objects>
-                <viewController id="sWZ-fO-aqd" customClass="MapViewController" customModule="Muzeler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapVC" id="sWZ-fO-aqd" customClass="MapViewController" customModule="Muzeler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9hM-T2-GpY">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hu-lg-yGk">
-                                <rect key="frame" x="0.0" y="155" width="393" height="614"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                         </subviews>
@@ -81,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LQ-tQ-3My" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4289" y="-444"/>
+            <point key="canvasLocation" x="4273" y="4"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="sSO-T1-Oii">
@@ -186,7 +185,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="mapTapped:" destination="kt4-vQ-nI3" eventType="touchUpInside" id="kry-Xu-bta"/>
-                                                    <segue destination="sWZ-fO-aqd" kind="show" identifier="MuseumMapVC" id="N55-b0-zg5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rBk-l6-3cT">
@@ -403,7 +401,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Drj-eB-YOA"/>
-        <segue reference="EHh-ub-Upg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
