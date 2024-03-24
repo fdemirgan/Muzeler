@@ -28,13 +28,13 @@ final class ViewModel {
                 }
                 self.notify(with: .reloadTableView)
             case .failure(let failure):
-                print(failure.localizedDescription)
+                self.notify(with: .error(failure))
             }
         }
     }
     func notify(with notify: NotifyViewModel){
         DispatchQueue.main.async {
-            self.delegate?.notify(.reloadTableView)
+            self.delegate?.notify(notify)
         }
     }
 }

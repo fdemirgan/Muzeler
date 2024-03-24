@@ -10,8 +10,8 @@ class ViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
     private var viewModel = ViewModel()
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.fetchMuseumList()
@@ -54,7 +54,10 @@ extension ViewController: MuseumTableViewModelDelegate {
         case .reloadTableView:
             tableView.reloadData()
         case .error(let museumApiError):
-            print(museumApiError)
+            AlertManager.shared.showAlert(title: ErrorConstants.error, message: ErrorMessages.message, vc: self) {
+                self.viewModel.fetchMuseumList()
+            }
+            print(museumApiError.rawValue)
         }
     }
 }

@@ -10,6 +10,9 @@
 		6428BF922B8A06FA00EC2F39 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428BF912B8A06FA00EC2F39 /* LocationManager.swift */; };
 		64B268332B88F52A008EB706 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B268322B88F52A008EB706 /* DetailViewController.swift */; };
 		64B7CCF82B95F44300C85417 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */; };
+		64B8C64D2BB083BF00D1EB62 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8C64C2BB083BF00D1EB62 /* AlertManager.swift */; };
+		64B8C64F2BB0C4E800D1EB62 /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8C64E2BB0C4E800D1EB62 /* ErrorConstants.swift */; };
+		64B8C6512BB0C57300D1EB62 /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8C6502BB0C57300D1EB62 /* ErrorMessages.swift */; };
 		64BAAE992B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BAAE982B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift */; };
 		64BAAE9D2B8E279500D85ED0 /* NotifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BAAE9C2B8E279500D85ED0 /* NotifyViewModel.swift */; };
 		64BDF5EB2B87488E00AD1D0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BDF5EA2B87488E00AD1D0C /* ViewModel.swift */; };
@@ -44,6 +47,9 @@
 		6428BF912B8A06FA00EC2F39 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		64B268322B88F52A008EB706 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
+		64B8C64C2BB083BF00D1EB62 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		64B8C64E2BB0C4E800D1EB62 /* ErrorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorConstants.swift; sourceTree = "<group>"; };
+		64B8C6502BB0C57300D1EB62 /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		64BAAE982B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumTableViewModelDelegate.swift; sourceTree = "<group>"; };
 		64BAAE9C2B8E279500D85ED0 /* NotifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyViewModel.swift; sourceTree = "<group>"; };
 		64BDF5EA2B87488E00AD1D0C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 		6428BF8E2B89D56100EC2F39 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				64B8C64B2BB0837800D1EB62 /* AlertManager */,
 				64C918512B90CD69008111D8 /* RegisterCellManager */,
 				64C918542B90DEFB008111D8 /* LocationManager */,
 				64BAAE9B2B8E277A00D85ED0 /* Enum */,
@@ -113,6 +120,14 @@
 			path = Maps;
 			sourceTree = "<group>";
 		};
+		64B8C64B2BB0837800D1EB62 /* AlertManager */ = {
+			isa = PBXGroup;
+			children = (
+				64B8C64C2BB083BF00D1EB62 /* AlertManager.swift */,
+			);
+			path = AlertManager;
+			sourceTree = "<group>";
+		};
 		64BAAE9A2B8E273F00D85ED0 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +141,8 @@
 			children = (
 				64BAAE9C2B8E279500D85ED0 /* NotifyViewModel.swift */,
 				64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */,
+				64B8C64E2BB0C4E800D1EB62 /* ErrorConstants.swift */,
+				64B8C6502BB0C57300D1EB62 /* ErrorMessages.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -461,12 +478,14 @@
 			files = (
 				64B7CCF82B95F44300C85417 /* SegueIdentifier.swift in Sources */,
 				64E5A8522B86505600B142DF /* MuseumEndpoints.swift in Sources */,
+				64B8C64F2BB0C4E800D1EB62 /* ErrorConstants.swift in Sources */,
 				64E5A82A2B8621A500B142DF /* ViewController.swift in Sources */,
 				64E5A8262B8621A500B142DF /* AppDelegate.swift in Sources */,
 				64E5A8472B863DA000B142DF /* AlamofireServiceManager.swift in Sources */,
 				64BAAE992B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift in Sources */,
 				64E5A8282B8621A500B142DF /* SceneDelegate.swift in Sources */,
 				64BDF5F72B87673700AD1D0C /* SourceViewController.swift in Sources */,
+				64B8C64D2BB083BF00D1EB62 /* AlertManager.swift in Sources */,
 				64B268332B88F52A008EB706 /* DetailViewController.swift in Sources */,
 				64BDF6222B87AF6300AD1D0C /* UIView+Ext.swift in Sources */,
 				64E5A83B2B8621F800B142DF /* Networking.swift in Sources */,
@@ -484,6 +503,7 @@
 				64E5A8542B8651FE00B142DF /* MuseumParameter.swift in Sources */,
 				64E5A83E2B86257E00B142DF /* Museum.swift in Sources */,
 				64E5A85C2B867F9100B142DF /* DataProvider.swift in Sources */,
+				64B8C6512BB0C57300D1EB62 /* ErrorMessages.swift in Sources */,
 				64BDF5FA2B876D3500AD1D0C /* Cities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
