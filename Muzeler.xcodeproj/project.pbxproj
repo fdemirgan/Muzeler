@@ -131,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				64BCFCAC2BADCAF4002AE3A6 /* MapViewController.swift */,
-				64E62D5F2BAF297B00C146F1 /* Models */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -221,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				64BDF6212B87AF6300AD1D0C /* UIView+Ext.swift */,
+				64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -385,14 +385,6 @@
 				64E5A85B2B867F9100B142DF /* DataProvider.swift */,
 			);
 			path = DataProvider;
-			sourceTree = "<group>";
-		};
-		64E62D5F2BAF297B00C146F1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

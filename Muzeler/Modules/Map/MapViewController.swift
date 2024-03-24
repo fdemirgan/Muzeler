@@ -33,7 +33,7 @@ final class MapViewController: UIViewController {
             let annotation = MuseumAnnotation()
             annotation.coordinate = selectedMuseum
             annotation.title = museum.name
-            annotation.imgaURL = "MuseumsAnnotationPin"
+            annotation.image = "MuseumsAnnotationPin"
             mapView.addAnnotation(annotation)
             mapView.showAnnotations(mapView.annotations, animated: true)
         }
@@ -46,7 +46,7 @@ final class MapViewController: UIViewController {
         let annotation = MuseumAnnotation()
         annotation.coordinate = selectedMuseum
         annotation.title = museum.name
-        annotation.imgaURL = "MuseumAnnotationPin"
+        annotation.image = "MuseumAnnotationPin"
         mapView.addAnnotation(annotation)
         let region = MKCoordinateRegion(center: selectedMuseum, span: MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04))
         mapView.setRegion(region, animated: true)
@@ -77,7 +77,7 @@ extension MapViewController: MKMapViewDelegate {
             museumAnnotationView?.annotation = annotation
         }
         if let museumAnnotation = annotation as? MuseumAnnotation {
-            museumAnnotationView?.image = UIImage(named: museumAnnotation.imgaURL)
+            museumAnnotationView?.image = UIImage(named: museumAnnotation.image)
         }
         return museumAnnotationView
     }

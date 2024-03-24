@@ -9,5 +9,5 @@ import Foundation
 import MapKit
 
 class MuseumAnnotation: MKPointAnnotation {
-    var imgaURL: String!
+    var image: String!
 }

@@ -177,9 +177,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89j-3g-m1j">
-                                                <rect key="frame" x="209" y="296" width="174" height="30.333333333333314"/>
+                                                <rect key="frame" x="228.66666666666663" y="296" width="154.33333333333337" height="30.333333333333314"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title=" 👻     HARİTADA GÖR">
+                                                <buttonConfiguration key="configuration" style="gray" title="📍 HARİTADA GÖR">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                                     <color key="baseBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 </buttonConfiguration>
@@ -411,7 +411,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
