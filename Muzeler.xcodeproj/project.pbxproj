@@ -39,6 +39,7 @@
 		64E5A8542B8651FE00B142DF /* MuseumParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5A8532B8651FE00B142DF /* MuseumParameter.swift */; };
 		64E5A85A2B867F5A00B142DF /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5A8592B867F5A00B142DF /* DataProviderProtocol.swift */; };
 		64E5A85C2B867F9100B142DF /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5A85B2B867F9100B142DF /* DataProvider.swift */; };
+		64E62D5E2BAF1E7D00C146F1 /* MuseumAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,7 @@
 		64E5A8532B8651FE00B142DF /* MuseumParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumParameter.swift; sourceTree = "<group>"; };
 		64E5A8592B867F5A00B142DF /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		64E5A85B2B867F9100B142DF /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				64BCFCAC2BADCAF4002AE3A6 /* MapViewController.swift */,
+				64E62D5F2BAF297B00C146F1 /* Models */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -384,6 +387,14 @@
 			path = DataProvider;
 			sourceTree = "<group>";
 		};
+		64E62D5F2BAF297B00C146F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -474,6 +485,7 @@
 				64BDF6222B87AF6300AD1D0C /* UIView+Ext.swift in Sources */,
 				64E5A83B2B8621F800B142DF /* Networking.swift in Sources */,
 				64C918532B90CF5F008111D8 /* RegisterCell.swift in Sources */,
+				64E62D5E2BAF1E7D00C146F1 /* MuseumAnnotation.swift in Sources */,
 				64BDF5EB2B87488E00AD1D0C /* ViewModel.swift in Sources */,
 				64E5A8452B863D8300B142DF /* URLSessionServiceManager.swift in Sources */,
 				64BDF6242B87B61F00AD1D0C /* CellViewModel.swift in Sources */,

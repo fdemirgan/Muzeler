@@ -40,9 +40,11 @@ final class DetailViewController: UIViewController {
     
     
     @IBAction func mapTapped(_ sender: Any) {
-        let destinationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: SegueIdentifier.MapVC.rawValue) as! MapViewController
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: SegueIdentifier.MapVC.rawValue) as! MapViewController
         destinationVC.detailMuseum = museum
-        navigationController?.pushViewController(destinationVC, animated: true)
+        show(destinationVC, sender: nil)
+//        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     @IBAction func phoneNumberTapped(_ sender: Any) {
