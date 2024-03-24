@@ -11,6 +11,7 @@ import CoreLocation
 
 final class MapViewController: UIViewController {
 
+    @IBOutlet weak var mapTypeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = LocationManager.shared
     var museums: [MuseumData] = []
@@ -21,8 +22,22 @@ final class MapViewController: UIViewController {
 
         mapView.delegate = self
         mapView.showsUserLocation = true
+        mapTypeSegmentedControl.addTarget(self, action: #selector(mapTypeChanged), for: .valueChanged)
         addAnnotations()
         addAnnotation()
+    }
+    
+    @objc func mapTypeChanged(_ segmentedControl: UISegmentedControl){
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .satellite
+        case 2:
+            mapView.mapType = .hybrid
+        default:
+            break
+        }
     }
     
     func addAnnotations(){

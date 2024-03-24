@@ -63,6 +63,15 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yxM-Ui-Qgw">
+                                <rect key="frame" x="98" y="65" width="197" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="Satalite"/>
+                                    <segment title="Hybrit"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZZx-n4-Dxw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -71,10 +80,13 @@
                             <constraint firstItem="6Hu-lg-yGk" firstAttribute="top" secondItem="ZZx-n4-Dxw" secondAttribute="top" id="VIE-tb-4iW"/>
                             <constraint firstItem="6Hu-lg-yGk" firstAttribute="leading" secondItem="ZZx-n4-Dxw" secondAttribute="leading" id="X7x-KN-vKt"/>
                             <constraint firstItem="ZZx-n4-Dxw" firstAttribute="trailing" secondItem="6Hu-lg-yGk" secondAttribute="trailing" id="gpK-V3-BYQ"/>
+                            <constraint firstItem="yxM-Ui-Qgw" firstAttribute="top" secondItem="ZZx-n4-Dxw" secondAttribute="top" constant="6" id="mpL-ve-sY8"/>
+                            <constraint firstItem="yxM-Ui-Qgw" firstAttribute="centerX" secondItem="9hM-T2-GpY" secondAttribute="centerX" id="zKK-31-1DC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I1C-0A-FFQ"/>
                     <connections>
+                        <outlet property="mapTypeSegmentedControl" destination="yxM-Ui-Qgw" id="8Xv-d8-ZDC"/>
                         <outlet property="mapView" destination="6Hu-lg-yGk" id="2Ad-Wu-1oO"/>
                     </connections>
                 </viewController>
