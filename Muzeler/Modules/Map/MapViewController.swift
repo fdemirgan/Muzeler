@@ -14,12 +14,14 @@ final class MapViewController: UIViewController {
     @IBOutlet weak var mapTypeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = LocationManager.shared
+    // mapView da mapType metodu yakın zamanda kaldırılacağından dolayı kodun geleceğe yönelik olması için...
+    var currentMapType: MKMapType = .standard
     var museums: [MuseumData] = []
     var detailMuseum: MuseumData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         mapView.delegate = self
         mapView.showsUserLocation = true
         mapTypeSegmentedControl.addTarget(self, action: #selector(mapTypeChanged), for: .valueChanged)
@@ -28,16 +30,18 @@ final class MapViewController: UIViewController {
     }
     
     @objc func mapTypeChanged(_ segmentedControl: UISegmentedControl){
+        
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            mapView.mapType = .standard
+            currentMapType = .standard
         case 1:
-            mapView.mapType = .satellite
+            currentMapType = .satellite
         case 2:
-            mapView.mapType = .hybrid
+            currentMapType = .hybrid
         default:
             break
         }
+        mapView.mapType = currentMapType
     }
     
     func addAnnotations(){
