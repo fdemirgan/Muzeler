@@ -12,15 +12,12 @@ final class AlertManager {
 
     private init(){ }
 
-    func showAlert(title: String, message: String, vc: UIViewController, onRefresh: @escaping () -> Void){
+    func showAlert(title: String, message: String, vc: UIViewController){
 
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
-        let refreshButton = UIAlertAction(title: "Yenile", style: .default) { action in
-             onRefresh()
-        }
+        
         alert.addAction(cancelButton)
-        alert.addAction(refreshButton)
         vc.present(alert, animated: true)
     }
 }

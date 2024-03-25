@@ -13,6 +13,8 @@
 		64B8C64D2BB083BF00D1EB62 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8C64C2BB083BF00D1EB62 /* AlertManager.swift */; };
 		64B8C64F2BB0C4E800D1EB62 /* ErrorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8C64E2BB0C4E800D1EB62 /* ErrorConstants.swift */; };
 		64B8C6512BB0C57300D1EB62 /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8C6502BB0C57300D1EB62 /* ErrorMessages.swift */; };
+		64B8C6552BB1A20300D1EB62 /* NoDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64B8C6542BB1A20300D1EB62 /* NoDataTableViewCell.xib */; };
+		64B8C6562BB1A20300D1EB62 /* NoDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8C6532BB1A20300D1EB62 /* NoDataTableViewCell.swift */; };
 		64BAAE992B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BAAE982B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift */; };
 		64BAAE9D2B8E279500D85ED0 /* NotifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BAAE9C2B8E279500D85ED0 /* NotifyViewModel.swift */; };
 		64BDF5EB2B87488E00AD1D0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BDF5EA2B87488E00AD1D0C /* ViewModel.swift */; };
@@ -50,6 +52,8 @@
 		64B8C64C2BB083BF00D1EB62 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		64B8C64E2BB0C4E800D1EB62 /* ErrorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorConstants.swift; sourceTree = "<group>"; };
 		64B8C6502BB0C57300D1EB62 /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
+		64B8C6532BB1A20300D1EB62 /* NoDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataTableViewCell.swift; sourceTree = "<group>"; };
+		64B8C6542BB1A20300D1EB62 /* NoDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataTableViewCell.xib; sourceTree = "<group>"; };
 		64BAAE982B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumTableViewModelDelegate.swift; sourceTree = "<group>"; };
 		64BAAE9C2B8E279500D85ED0 /* NotifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyViewModel.swift; sourceTree = "<group>"; };
 		64BDF5EA2B87488E00AD1D0C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 				64B8C64C2BB083BF00D1EB62 /* AlertManager.swift */,
 			);
 			path = AlertManager;
+			sourceTree = "<group>";
+		};
+		64B8C6522BB1A13500D1EB62 /* NoDataCell */ = {
+			isa = PBXGroup;
+			children = (
+				64B8C6532BB1A20300D1EB62 /* NoDataTableViewCell.swift */,
+				64B8C6542BB1A20300D1EB62 /* NoDataTableViewCell.xib */,
+			);
+			path = NoDataCell;
 			sourceTree = "<group>";
 		};
 		64BAAE9A2B8E273F00D85ED0 /* Protocol */ = {
@@ -256,6 +269,7 @@
 		64C9184F2B90B621008111D8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				64B8C6522BB1A13500D1EB62 /* NoDataCell */,
 				64BDF61B2B87ACB400AD1D0C /* MuseumCell */,
 			);
 			path = Cells;
@@ -466,6 +480,7 @@
 				64E5A82F2B8621A800B142DF /* Assets.xcassets in Resources */,
 				64BDF61F2B87AD3600AD1D0C /* MuseumTableViewCell.xib in Resources */,
 				64E5A82D2B8621A500B142DF /* Main.storyboard in Resources */,
+				64B8C6552BB1A20300D1EB62 /* NoDataTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B8C6562BB1A20300D1EB62 /* NoDataTableViewCell.swift in Sources */,
 				64B7CCF82B95F44300C85417 /* SegueIdentifier.swift in Sources */,
 				64E5A8522B86505600B142DF /* MuseumEndpoints.swift in Sources */,
 				64B8C64F2BB0C4E800D1EB62 /* ErrorConstants.swift in Sources */,
