@@ -130,6 +130,7 @@
 		64BCFCAB2BADCA24002AE3A6 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */,
 				64BCFCAC2BADCAF4002AE3A6 /* MapViewController.swift */,
 			);
 			path = Map;
@@ -220,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				64BDF6212B87AF6300AD1D0C /* UIView+Ext.swift */,
-				64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";

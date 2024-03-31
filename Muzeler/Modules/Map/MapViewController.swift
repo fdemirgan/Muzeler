@@ -13,11 +13,11 @@ final class MapViewController: UIViewController {
 
     @IBOutlet weak var mapTypeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
-    let locationManager = LocationManager.shared
+    private let locationManager = LocationManager.shared
     // mapView da mapType metodu yakın zamanda kaldırılacağından dolayı kodun geleceğe yönelik olması için...
-    var currentMapType: MKMapType = .standard
-    var museums: [MuseumData] = []
-    var detailMuseum: MuseumData?
+    private var currentMapType: MKMapType = .standard
+     var museums: [MuseumData] = []
+    public var detailMuseum: MuseumData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,25 +76,29 @@ final class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        
         if let userLocation = mapView.userLocation.location?.coordinate {
             let region = MKCoordinateRegion(center: userLocation, span: MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015))
             mapView.setRegion(region, animated: true)
         }
     }
-    // Harita görünümündeki herbir annotation'a, nasıl bir görünüm atanacağını belirler.
+    // Harita görünümündeki herbir annotation'a, nasıl bir görünüm atanacağını belirler. Ben burada custom annotation oluşturacağım.
     func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
          // Annotation eklenecek konum kullanıcının konumuysa nil döndür.
         if annotation is MKUserLocation {
             return nil
         }
-        var museumAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "MuseumAnnotationView")
+        let identifier = "MuseumAnnotationView"
+        var museumAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
         if museumAnnotationView == nil {
-           museumAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "MuseumAnnotationView")
+           museumAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             museumAnnotationView?.canShowCallout = true
             
         }else {
             museumAnnotationView?.annotation = annotation
         }
+
         if let museumAnnotation = annotation as? MuseumAnnotation {
             museumAnnotationView?.image = UIImage(named: museumAnnotation.image)
         }
