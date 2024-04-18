@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6428BF922B8A06FA00EC2F39 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428BF912B8A06FA00EC2F39 /* LocationManager.swift */; };
+		64690DA22BB919BA00EF0E68 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64690DA12BB919BA00EF0E68 /* CustomCalloutView.swift */; };
+		64690DA42BB91C0900EF0E68 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64690DA32BB91C0900EF0E68 /* CustomCalloutView.xib */; };
 		64B268332B88F52A008EB706 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B268322B88F52A008EB706 /* DetailViewController.swift */; };
 		64B7CCF82B95F44300C85417 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */; };
 		64BAAE992B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BAAE982B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		6428BF912B8A06FA00EC2F39 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		64690DA12BB919BA00EF0E68 /* CustomCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
+		64690DA32BB91C0900EF0E68 /* CustomCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
 		64B268322B88F52A008EB706 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		64BAAE982B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumTableViewModelDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		64690DA02BB9196A00EF0E68 /* CalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				64690DA12BB919BA00EF0E68 /* CustomCalloutView.swift */,
+				64690DA32BB91C0900EF0E68 /* CustomCalloutView.xib */,
+			);
+			path = CalloutView;
+			sourceTree = "<group>";
+		};
 		64B268312B88F498008EB706 /* MuseumDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,8 +143,9 @@
 		64BCFCAB2BADCA24002AE3A6 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */,
 				64BCFCAC2BADCAF4002AE3A6 /* MapViewController.swift */,
+				64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */,
+				64690DA02BB9196A00EF0E68 /* CalloutView */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -454,6 +468,7 @@
 				64E5A8322B8621A800B142DF /* LaunchScreen.storyboard in Resources */,
 				64E5A82F2B8621A800B142DF /* Assets.xcassets in Resources */,
 				64BDF61F2B87AD3600AD1D0C /* MuseumTableViewCell.xib in Resources */,
+				64690DA42BB91C0900EF0E68 /* CustomCalloutView.xib in Resources */,
 				64E5A82D2B8621A500B142DF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +493,7 @@
 				64E5A83B2B8621F800B142DF /* Networking.swift in Sources */,
 				64C918532B90CF5F008111D8 /* RegisterCell.swift in Sources */,
 				64E62D5E2BAF1E7D00C146F1 /* MuseumAnnotation.swift in Sources */,
+				64690DA22BB919BA00EF0E68 /* CustomCalloutView.swift in Sources */,
 				64BDF5EB2B87488E00AD1D0C /* ViewModel.swift in Sources */,
 				64E5A8452B863D8300B142DF /* URLSessionServiceManager.swift in Sources */,
 				64BDF6242B87B61F00AD1D0C /* CellViewModel.swift in Sources */,

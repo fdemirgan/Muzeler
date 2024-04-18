@@ -54,7 +54,7 @@ final class MapViewController: UIViewController {
             annotation.title = museum.name
             annotation.image = "MuseumsAnnotationPin"
             mapView.addAnnotation(annotation)
-            mapView.showAnnotations(mapView.annotations, animated: true)
+//            mapView.showAnnotations(mapView.annotations, animated: true)
         }
     }
 
@@ -88,13 +88,39 @@ extension MapViewController: MKMapViewDelegate {
         if annotation is MKUserLocation {
             return nil
         }
+        
         let identifier = "MuseumAnnotationView"
         var museumAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
 
         if museumAnnotationView == nil {
            museumAnnotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             museumAnnotationView?.canShowCallout = true
+            let calloutView = CustomCalloutView.instanceFromNib()
             
+            calloutView.onCancelTapped = {
+                
+                if let selectedAnnotation = mapView.selectedAnnotations.first {
+                        mapView.deselectAnnotation(selectedAnnotation, animated: true)
+                    }
+            }
+            // Navigasyona git butonuna basıldığında navigasyona yönlendirme işlemini gerçekleştirir.
+            calloutView.onNavigateTapped = {
+                // Seçili annotation ı belirler.
+                guard let selectedAnnotation = mapView.selectedAnnotations.first else { return }
+                // Gidilecek yerin koordinatını oluşturur.
+                let destinationPlacemark = MKPlacemark(coordinate: selectedAnnotation.coordinate)
+                // Gidilecek yerin harita öğesini oluşturur.
+                let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+                destinationMapItem.name = selectedAnnotation.title ?? "Destination"
+                // Geçerli konumu ve harita öğesini oluşturur.
+                let currentPlacemark = MKPlacemark(coordinate: mapView.userLocation.coordinate)
+                let currentMapItem = MKMapItem(placemark: currentPlacemark)
+                // Yönlendirme seçeneğini belirler.
+                let directionMode = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+                // Yönlendirme uygulamasını açar.
+                MKMapItem.openMaps(with: [currentMapItem, destinationMapItem], launchOptions: directionMode)
+            }
+            museumAnnotationView?.detailCalloutAccessoryView = calloutView
         }else {
             museumAnnotationView?.annotation = annotation
         }
@@ -103,6 +129,10 @@ extension MapViewController: MKMapViewDelegate {
             museumAnnotationView?.image = UIImage(named: museumAnnotation.image)
         }
         return museumAnnotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        mapView.setCenter(view.annotation!.coordinate, animated: true)
     }
 }
 
