@@ -55,11 +55,11 @@
             <objects>
                 <viewController id="kt4-vQ-nI3" customClass="DetailViewController" customModule="Muzeler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UP4-Bz-rtW">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="1300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1352"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFp-6U-K34">
-                                <rect key="frame" x="0.0" y="155" width="393" height="1062"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="1166"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzB-ao-9mn">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1150"/>
@@ -250,7 +250,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Mv5-iT-31T"/>
-                    <size key="freeformSize" width="393" height="1300"/>
+                    <size key="freeformSize" width="393" height="1352"/>
                     <connections>
                         <outlet property="addressLbl" destination="Ofc-S5-GEF" id="9T2-y9-AL3"/>
                         <outlet property="descrpitonLbl" destination="Qf7-Yv-fq6" id="Vrv-0U-AbB"/>
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cia-1a-NKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3345.801526717557" y="554.92957746478874"/>
+            <point key="canvasLocation" x="3315.2671755725191" y="453.52112676056339"/>
         </scene>
         <!--Müze Ara-->
         <scene sceneID="xEM-Zb-zrX">
