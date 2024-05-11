@@ -33,7 +33,7 @@ final class DetailViewController: UIViewController {
         
         detailUpdate()
     }
-
+    
     func detailUpdate(){
         if let museum = museum {
             nameLbl.text = museum.name
@@ -46,17 +46,17 @@ final class DetailViewController: UIViewController {
             
         }
     }
-
+    
     @objc func openWebSite() {
-           guard let urlString = museum?.website, let url = URL(string: urlString) else {
-               print(MuseumDetailTappedError.webSite)
-               return
-           }
-           UIApplication.shared.open(url, options: [:], completionHandler: nil)
-       }
-
+        guard let urlString = museum?.website, let url = URL(string: urlString) else {
+            print(MuseumDetailTappedError.webSite)
+            return
+        }
+        UIApplication.shared.open(url)
+    }
+    
     @objc func openEmail() {
-        guard let urlString = museum?.email, let url = URL(string: urlString) else {
+        guard let emailAdress = museum?.email, let url = URL(string: "mailto:\(emailAdress)") else {
             print(MuseumDetailTappedError.emailAdress)
             return
         }
