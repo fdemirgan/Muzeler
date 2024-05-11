@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		641D01702BEFF6040095F816 /* MuseumDetailTappedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641D016F2BEFF6040095F816 /* MuseumDetailTappedError.swift */; };
 		6428BF922B8A06FA00EC2F39 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428BF912B8A06FA00EC2F39 /* LocationManager.swift */; };
 		64B268332B88F52A008EB706 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B268322B88F52A008EB706 /* DetailViewController.swift */; };
 		64B7CCF82B95F44300C85417 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		641D016F2BEFF6040095F816 /* MuseumDetailTappedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumDetailTappedError.swift; sourceTree = "<group>"; };
 		6428BF912B8A06FA00EC2F39 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		64B268322B88F52A008EB706 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */,
 				64B8C64E2BB0C4E800D1EB62 /* ErrorConstants.swift */,
 				64B8C6502BB0C57300D1EB62 /* ErrorMessages.swift */,
+				641D016F2BEFF6040095F816 /* MuseumDetailTappedError.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				64E5A8402B86399B00B142DF /* Endpointable.swift in Sources */,
 				64BAAE9D2B8E279500D85ED0 /* NotifyViewModel.swift in Sources */,
 				6428BF922B8A06FA00EC2F39 /* LocationManager.swift in Sources */,
+				641D01702BEFF6040095F816 /* MuseumDetailTappedError.swift in Sources */,
 				64BDF5F32B8766B900AD1D0C /* CitiesViewModel.swift in Sources */,
 				64BDF61E2B87AD3600AD1D0C /* MuseumTableViewCell.swift in Sources */,
 				64E5A8422B8639AE00B142DF /* Parameterable.swift in Sources */,

@@ -33,7 +33,7 @@ final class DetailViewController: UIViewController {
         
         detailUpdate()
     }
-    
+
     func detailUpdate(){
         if let museum = museum {
             nameLbl.text = museum.name
@@ -46,21 +46,21 @@ final class DetailViewController: UIViewController {
             
         }
     }
-    
+
     @objc func openWebSite() {
-        guard let url = URL(string: museum?.website ?? "http://www.google.com") else { print("Geçersiz web sitesi URL'si.")
-            return
-        }
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        }
-    
-    @objc func openEmail(){
-        guard let url = URL(string: museum?.email ?? "") else {
-            print("Geçersiz eMail adresi.")
+           guard let urlString = museum?.website, let url = URL(string: urlString) else {
+               print(MuseumDetailTappedError.webSite)
+               return
+           }
+           UIApplication.shared.open(url, options: [:], completionHandler: nil)
+       }
+
+    @objc func openEmail() {
+        guard let urlString = museum?.email, let url = URL(string: urlString) else {
+            print(MuseumDetailTappedError.emailAdress)
             return
         }
         UIApplication.shared.open(url)
-        
     }
     
     
@@ -71,7 +71,7 @@ final class DetailViewController: UIViewController {
     @IBAction func phoneNumberTapped(_ sender: Any) {
         // müzeler genel müdürlüğü tel: 03124708000
         // Çağrıyı simüle etmek için gerçek bir cihaz gereklidir.
-        guard let phoneURL = URL(string: "tel://\(museum?.phone ?? "03124708000")") else { print("Geçersiz telefon numarası.")
+        guard let phoneNumber = museum?.phone, let phoneURL = URL(string: "tel://\(phoneNumber)") else { print(MuseumDetailTappedError.phoneNumber)
             return }
         UIApplication.shared.open(phoneURL)
     }
