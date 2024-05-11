@@ -22,6 +22,15 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapWebSite = UITapGestureRecognizer(target: self, action: #selector(openWebSite))
+        webSiteLbl.isUserInteractionEnabled = true
+        webSiteLbl.addGestureRecognizer(tapWebSite)
+        
+        let tapEmail = UITapGestureRecognizer(target: self, action: #selector(openEmail))
+        eMailLbl.isUserInteractionEnabled = true
+        eMailLbl.addGestureRecognizer(tapEmail)
+        
         detailUpdate()
     }
     
@@ -38,16 +47,32 @@ final class DetailViewController: UIViewController {
         }
     }
     
+    @objc func openWebSite() {
+        guard let url = URL(string: museum?.website ?? "http://www.google.com") else { print("Geçersiz web sitesi URL'si.")
+            return
+        }
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    
+    @objc func openEmail(){
+        guard let url = URL(string: museum?.email ?? "") else {
+            print("Geçersiz eMail adresi.")
+            return
+        }
+        UIApplication.shared.open(url)
+        
+    }
+    
     
     @IBAction func mapTapped(_ sender: Any) {
         print("Muzenin konumu haritada gösterilecek.")
     }
     
     @IBAction func phoneNumberTapped(_ sender: Any) {
-        print("Muzenin telefonu aramaya yönlendirilecek.")
+        // müzeler genel müdürlüğü tel: 03124708000
+        // Çağrıyı simüle etmek için gerçek bir cihaz gereklidir.
+        guard let phoneURL = URL(string: "tel://\(museum?.phone ?? "03124708000")") else { print("Geçersiz telefon numarası.")
+            return }
+        UIApplication.shared.open(phoneURL)
     }
-    
-    
-    
-    
 }
