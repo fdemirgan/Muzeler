@@ -65,7 +65,11 @@ final class DetailViewController: UIViewController {
     
     
     @IBAction func mapTapped(_ sender: Any) {
-        print("Muzenin konumu haritada gösterilecek.")
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyBoard.instantiateViewController(withIdentifier: SegueIdentifier.MapVC.rawValue) as! MapViewController
+        destinationVC.detailMuseum = museum
+        show(destinationVC, sender: nil)
+//        navigationController?.pushViewController(destinationVC, animated: true)
     }
     
     @IBAction func phoneNumberTapped(_ sender: Any) {

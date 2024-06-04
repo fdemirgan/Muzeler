@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,6 +50,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1993.1297709923663" y="3.5211267605633805"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="geC-Jd-RbY">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" id="sWZ-fO-aqd" customClass="MapViewController" customModule="Muzeler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9hM-T2-GpY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hu-lg-yGk">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yxM-Ui-Qgw">
+                                <rect key="frame" x="98" y="65" width="197" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="Satalite"/>
+                                    <segment title="Hybrit"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZZx-n4-Dxw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZZx-n4-Dxw" firstAttribute="bottom" secondItem="6Hu-lg-yGk" secondAttribute="bottom" id="Ik4-Af-6Mc"/>
+                            <constraint firstItem="6Hu-lg-yGk" firstAttribute="top" secondItem="ZZx-n4-Dxw" secondAttribute="top" id="VIE-tb-4iW"/>
+                            <constraint firstItem="6Hu-lg-yGk" firstAttribute="leading" secondItem="ZZx-n4-Dxw" secondAttribute="leading" id="X7x-KN-vKt"/>
+                            <constraint firstItem="ZZx-n4-Dxw" firstAttribute="trailing" secondItem="6Hu-lg-yGk" secondAttribute="trailing" id="gpK-V3-BYQ"/>
+                            <constraint firstItem="yxM-Ui-Qgw" firstAttribute="top" secondItem="ZZx-n4-Dxw" secondAttribute="top" constant="6" id="mpL-ve-sY8"/>
+                            <constraint firstItem="yxM-Ui-Qgw" firstAttribute="centerX" secondItem="9hM-T2-GpY" secondAttribute="centerX" id="zKK-31-1DC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="I1C-0A-FFQ"/>
+                    <connections>
+                        <outlet property="mapTypeSegmentedControl" destination="yxM-Ui-Qgw" id="8Xv-d8-ZDC"/>
+                        <outlet property="mapView" destination="6Hu-lg-yGk" id="2Ad-Wu-1oO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8LQ-tQ-3My" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4273" y="4"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="sSO-T1-Oii">
@@ -145,9 +189,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89j-3g-m1j">
-                                                <rect key="frame" x="209" y="296" width="174" height="30.333333333333314"/>
+                                                <rect key="frame" x="228.66666666666663" y="296" width="154.33333333333337" height="30.333333333333314"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title=" 👻     HARİTADA GÖR">
+                                                <buttonConfiguration key="configuration" style="gray" title="📍 HARİTADA GÖR">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="14"/>
                                                     <color key="baseBackgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                                 </buttonConfiguration>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		641D01702BEFF6040095F816 /* MuseumDetailTappedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641D016F2BEFF6040095F816 /* MuseumDetailTappedError.swift */; };
 		6428BF922B8A06FA00EC2F39 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6428BF912B8A06FA00EC2F39 /* LocationManager.swift */; };
+		64690DA22BB919BA00EF0E68 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64690DA12BB919BA00EF0E68 /* CustomCalloutView.swift */; };
+		64690DA42BB91C0900EF0E68 /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64690DA32BB91C0900EF0E68 /* CustomCalloutView.xib */; };
 		64B268332B88F52A008EB706 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B268322B88F52A008EB706 /* DetailViewController.swift */; };
 		64B7CCF82B95F44300C85417 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */; };
 		64B8C64D2BB083BF00D1EB62 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8C64C2BB083BF00D1EB62 /* AlertManager.swift */; };
@@ -18,6 +20,7 @@
 		64B8C6562BB1A20300D1EB62 /* NoDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8C6532BB1A20300D1EB62 /* NoDataTableViewCell.swift */; };
 		64BAAE992B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BAAE982B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift */; };
 		64BAAE9D2B8E279500D85ED0 /* NotifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BAAE9C2B8E279500D85ED0 /* NotifyViewModel.swift */; };
+		64BCFCAD2BADCAF4002AE3A6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCFCAC2BADCAF4002AE3A6 /* MapViewController.swift */; };
 		64BDF5EB2B87488E00AD1D0C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BDF5EA2B87488E00AD1D0C /* ViewModel.swift */; };
 		64BDF5F32B8766B900AD1D0C /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BDF5F22B8766B900AD1D0C /* CitiesViewModel.swift */; };
 		64BDF5F72B87673700AD1D0C /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BDF5F62B87673700AD1D0C /* SourceViewController.swift */; };
@@ -44,11 +47,14 @@
 		64E5A8542B8651FE00B142DF /* MuseumParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5A8532B8651FE00B142DF /* MuseumParameter.swift */; };
 		64E5A85A2B867F5A00B142DF /* DataProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5A8592B867F5A00B142DF /* DataProviderProtocol.swift */; };
 		64E5A85C2B867F9100B142DF /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E5A85B2B867F9100B142DF /* DataProvider.swift */; };
+		64E62D5E2BAF1E7D00C146F1 /* MuseumAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		641D016F2BEFF6040095F816 /* MuseumDetailTappedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumDetailTappedError.swift; sourceTree = "<group>"; };
 		6428BF912B8A06FA00EC2F39 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		64690DA12BB919BA00EF0E68 /* CustomCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
+		64690DA32BB91C0900EF0E68 /* CustomCalloutView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
 		64B268322B88F52A008EB706 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		64B7CCF72B95F44300C85417 /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		64B8C64C2BB083BF00D1EB62 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -58,6 +64,7 @@
 		64B8C6542BB1A20300D1EB62 /* NoDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataTableViewCell.xib; sourceTree = "<group>"; };
 		64BAAE982B8E272000D85ED0 /* MuseumTableViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumTableViewModelDelegate.swift; sourceTree = "<group>"; };
 		64BAAE9C2B8E279500D85ED0 /* NotifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyViewModel.swift; sourceTree = "<group>"; };
+		64BCFCAC2BADCAF4002AE3A6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		64BDF5EA2B87488E00AD1D0C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		64BDF5F22B8766B900AD1D0C /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
 		64BDF5F62B87673700AD1D0C /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +92,7 @@
 		64E5A8532B8651FE00B142DF /* MuseumParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumParameter.swift; sourceTree = "<group>"; };
 		64E5A8592B867F5A00B142DF /* DataProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderProtocol.swift; sourceTree = "<group>"; };
 		64E5A85B2B867F9100B142DF /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuseumAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		64690DA02BB9196A00EF0E68 /* CalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				64690DA12BB919BA00EF0E68 /* CustomCalloutView.swift */,
+				64690DA32BB91C0900EF0E68 /* CustomCalloutView.xib */,
+			);
+			path = CalloutView;
+			sourceTree = "<group>";
+		};
 		64B268312B88F498008EB706 /* MuseumDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +136,7 @@
 			path = MuseumDetail;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		64B8A2CF2BA471E8005633D6 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +161,8 @@
 			path = NoDataCell;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> Map
 		64BAAE9A2B8E273F00D85ED0 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +181,16 @@
 				641D016F2BEFF6040095F816 /* MuseumDetailTappedError.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		64BCFCAB2BADCA24002AE3A6 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				64BCFCAC2BADCAF4002AE3A6 /* MapViewController.swift */,
+				64E62D5D2BAF1E7D00C146F1 /* MuseumAnnotation.swift */,
+				64690DA02BB9196A00EF0E68 /* CalloutView */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		64BDF5E92B87485D00AD1D0C /* ViewModel */ = {
@@ -191,7 +221,7 @@
 		64BDF5EE2B874E2D00AD1D0C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				64B8A2CF2BA471E8005633D6 /* Maps */,
+				64BCFCAB2BADCA24002AE3A6 /* Map */,
 				64C9184E2B90B5B4008111D8 /* Models */,
 				64C9184F2B90B621008111D8 /* Cells */,
 				64B268312B88F498008EB706 /* MuseumDetail */,
@@ -482,6 +512,7 @@
 				64E5A8322B8621A800B142DF /* LaunchScreen.storyboard in Resources */,
 				64E5A82F2B8621A800B142DF /* Assets.xcassets in Resources */,
 				64BDF61F2B87AD3600AD1D0C /* MuseumTableViewCell.xib in Resources */,
+				64690DA42BB91C0900EF0E68 /* CustomCalloutView.xib in Resources */,
 				64E5A82D2B8621A500B142DF /* Main.storyboard in Resources */,
 				64B8C6552BB1A20300D1EB62 /* NoDataTableViewCell.xib in Resources */,
 			);
@@ -509,6 +540,8 @@
 				64BDF6222B87AF6300AD1D0C /* UIView+Ext.swift in Sources */,
 				64E5A83B2B8621F800B142DF /* Networking.swift in Sources */,
 				64C918532B90CF5F008111D8 /* RegisterCell.swift in Sources */,
+				64E62D5E2BAF1E7D00C146F1 /* MuseumAnnotation.swift in Sources */,
+				64690DA22BB919BA00EF0E68 /* CustomCalloutView.swift in Sources */,
 				64BDF5EB2B87488E00AD1D0C /* ViewModel.swift in Sources */,
 				64E5A8452B863D8300B142DF /* URLSessionServiceManager.swift in Sources */,
 				64BDF6242B87B61F00AD1D0C /* CellViewModel.swift in Sources */,
@@ -520,6 +553,7 @@
 				64BDF5F32B8766B900AD1D0C /* CitiesViewModel.swift in Sources */,
 				64BDF61E2B87AD3600AD1D0C /* MuseumTableViewCell.swift in Sources */,
 				64E5A8422B8639AE00B142DF /* Parameterable.swift in Sources */,
+				64BCFCAD2BADCAF4002AE3A6 /* MapViewController.swift in Sources */,
 				64E5A8542B8651FE00B142DF /* MuseumParameter.swift in Sources */,
 				64E5A83E2B86257E00B142DF /* Museum.swift in Sources */,
 				64E5A85C2B867F9100B142DF /* DataProvider.swift in Sources */,

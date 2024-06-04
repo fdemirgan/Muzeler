@@ -18,15 +18,15 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     static let shared = LocationManager() // singleton instance
     private var locationManager = CLLocationManager()
     weak var locationDelegate: LocationManagerDelegate?
-  
     
-   private override init() {
-        super.init() 
-
+    private override init() {
+        super.init()
+        
         locationManager.delegate = self
         locationManager.requestLocation()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -38,7 +38,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
             locationDelegate?.didUpdateLocation(latitude: latitude, longitude: longitude)
         }
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error.localizedDescription)
     }
