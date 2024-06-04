@@ -136,7 +136,6 @@
 			path = MuseumDetail;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		64B8A2CF2BA471E8005633D6 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +160,6 @@
 			path = NoDataCell;
 			sourceTree = "<group>";
 		};
-=======
->>>>>>> Map
 		64BAAE9A2B8E273F00D85ED0 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
